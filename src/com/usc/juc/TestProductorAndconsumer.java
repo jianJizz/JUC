@@ -5,13 +5,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 消费者生产者
- * 出现问题:
- * 它也会不断的去消费，也会一直打印“缺货”，即使是产品已满状态，也会不断地进货。
- * 解决:
- * 等待唤醒机制
- * 为了避免虚假唤醒问题，wait方法应该总是在循环中使用
+ *
  * 将synchronized改为lock
+ * lock.newCondition创建的每个ConditionObject的内存地址都是不一样的，是不同的对象
  * @author apple
  *
  */
