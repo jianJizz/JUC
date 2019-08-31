@@ -1,4 +1,4 @@
-package com.usc.juc.bczm;
+package com.usc.juc.bfzm;
 
 public class ThreadLocalTest {
 	

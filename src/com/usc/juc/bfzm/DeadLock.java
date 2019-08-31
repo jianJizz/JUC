@@ -1,4 +1,4 @@
-package com.usc.juc.bczm;
+package com.usc.juc.bfzm;
 /**
  * 死锁的四个条件:
  * 1.互斥条件: 同一时刻只能由一个线程占用该资源

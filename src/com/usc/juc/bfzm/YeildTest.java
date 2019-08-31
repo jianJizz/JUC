@@ -1,4 +1,4 @@
-package com.usc.juc.bczm;
+package com.usc.juc.bfzm;
 /**
  * 调用Thread类的静态方法暗示线程调度器当前线程请求让出cpu-->处于就绪状态 
  * @author apple
