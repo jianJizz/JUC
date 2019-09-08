@@ -2,11 +2,14 @@
 *.class
 .classpath
 .settings
+.idea/
+.vscode/
 # Log file
 *.log
 
 target
 bin/
+out/
 # Package Files #
 *.jar
 *.war
@@ -15,3 +18,6 @@ bin/
 *.zip
 *.tar.gz
 *.rar
+*.iml
+*.json
+

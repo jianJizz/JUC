@@ -7,6 +7,13 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		int[] twoSum = twoSum(new int[]{1,2,4,6}, 7);
 		System.out.println(Arrays.toString(twoSum));
+		/*
+		target = 7
+		1 0
+		2 1
+		4 2
+		6 3
+		 */
 	}
 	
 	
