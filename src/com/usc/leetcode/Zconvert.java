@@ -6,7 +6,7 @@ public class Zconvert {
         System.out.println(ans);
     }
 
-    // TODO:明天继续刷题
+   
     // down: [0, r)
     // up: [r-2, 0)
     public String convert(String s, int numRows) {

@@ -2,7 +2,7 @@ package com.usc.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
+
 
 /**
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
