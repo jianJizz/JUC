@@ -1,6 +1,5 @@
 package com.usc.leetcode;
 
-import java.util.List;
 
 /**
  * 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
@@ -30,6 +29,7 @@ public class DeleteDuplicates {
     }
 
 
+    // 1->1->2
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
