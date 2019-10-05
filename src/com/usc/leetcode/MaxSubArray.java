@@ -17,10 +17,22 @@ package com.usc.leetcode;
  */
 public class MaxSubArray{
     public static void main(String[] args) {
-        
+        int sum = MaxSubArray.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
+        System.out.println(sum);
     }
 
-
+    // 1 2 3 4 5 -1
+    // 如果sum大于0说明其对ans有增益效果，加进去，否则将sum等于当前值，更新ans
+    public static int maxSubArray(int[] arr){
+        int ans = arr[0];
+        int sum = 0;
+        for (int i=0; i<arr.length; i++){
+            if (sum > 0) sum += arr[i];
+            else sum = arr[i];
+            ans = Math.max(ans, sum);
+        }
+        return ans;
+    }
 
     
 }
