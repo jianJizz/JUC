@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LengthOfLongestSubstring{
     public static void main(String[] args) {
-        int max = new LengthOfLongestSubstring().lengthOfLongestSubstring2("abcde");
+        int max = new LengthOfLongestSubstring().lengthOfLongestSubstring2("abcabcbb");
         System.out.println(max);
     }
 
