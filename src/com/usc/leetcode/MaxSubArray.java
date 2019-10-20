@@ -17,7 +17,7 @@ package com.usc.leetcode;
  */
 public class MaxSubArray{
     public static void main(String[] args) {
-        int sum = MaxSubArray.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
+        int sum = MaxSubArray.maxSubArray2(new int[]{1, -1, 1});
         System.out.println(sum);
     }
 
@@ -34,5 +34,34 @@ public class MaxSubArray{
         return ans;
     }
 
+
+    public static int maxSubArray2(int[] nums) {
+
+        return help(nums, 0, nums.length-1);
+    }
+
+    private static int help(int[] nums, int left, int right){
+        if (right == left) return nums[left];
+        int mid =  (left + right) / 2;
+        int m1 = help(nums, left, mid);
+        int m2 = help(nums, mid+1, right);
+
+        int leftSum = nums[mid];
+        int now = 0;
+        for (int i=mid-1; i>=left; i--){
+            now += nums[i];
+            leftSum = Math.max(leftSum, now);
+        }
+
+        int rightSum = nums[mid+1];
+        now = 0;
+        for(int i=mid+2; i<=right; i++){
+            now += nums[i];
+            rightSum = Math.max(rightSum, now);
+        }
+        int  m3 = leftSum + rightSum;
+
+        return Math.max(m1, Math.max(m2, m3));
+    }
     
 }
