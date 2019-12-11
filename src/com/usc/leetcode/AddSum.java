@@ -10,6 +10,7 @@ package com.usc.leetcode;
  * 示例：
  * 
  * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4) 输出：7 -> 0 -> 8 原因：342 + 465 = 807
+ * CTRL ALT F6
  */
 public class AddSum {
 
