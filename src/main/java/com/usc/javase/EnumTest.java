@@ -6,7 +6,7 @@ package com.usc.javase;
  */
 public class EnumTest {
     public static void main(String[] args) {
-        System.out.println(Season.SPRING);
+//        System.out.println(Season.SPRING);
         Season season = Season.SPRING;
         switch (season){
             case SPRING:
@@ -20,5 +20,13 @@ public class EnumTest {
                 break;
         }
 
+//        if (season.equals(Season.SPRING)){
+//            System.out.println(season); // out is ok -> 调的就是this==object
+//        }
+//
+//        if (season == Season.SPRING){
+//            System.out.println(season.hashCode()); // out is ok
+//            System.out.println("SPRING".hashCode());
+//        }
     }
 }
