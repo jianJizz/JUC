@@ -1,34 +1,61 @@
 package com.usc;
 
-class Test {
-    public int firstBadVersion(int n) {
-        int l = 1, r = n;
-        while (l <= r) {
-            int mid = l + r >> 1;
-            // 1, 2, 3, 4, 5
-            // 0  0  0  1  1
-            boolean isBadMid = isBadVersion(mid);
-            if (mid -1 >= l && isBadMid && isBadVersion(mid-1) == false){
-                return mid;
+class Solution {
+    public int romanToInt(String s) {
+        int result = 0;
+        char numC;
+        for(int index = s.length() - 1 ; index != -1 ; index -- ){
+            numC = s.charAt(index);
+            if(numC == 'I'){
+                result += 1;
             }
-
-            // 版本错误
-            if (isBadMid) {
-                r = mid;
-            }else{
-                l = mid;
+            if(numC == 'V'){
+                result += 5;
+                if(index != 0 && s.charAt(index - 1) == 'I'){
+                    result --;
+                    index --;
+                }
+            }
+            if(numC == 'X'){
+                result += 10;
+                if(index != 0 && s.charAt(index - 1) == 'I'){
+                    result --;
+                    index --;
+                }
+            }
+            if(numC == 'L'){
+                result += 50;
+                if(index != 0 && s.charAt(index - 1) == 'X'){
+                    result -= 10;
+                    index --;
+                }
+            }
+            if(numC == 'C'){
+                result += 100;
+                if(index != 0 && s.charAt(index - 1) == 'X'){
+                    result -= 10;
+                    index --;
+                }
+            }
+            if(numC == 'D'){
+                result += 500;
+                if(index != 0 && s.charAt(index - 1) == 'C'){
+                    result -= 100;
+                    index --;
+                }
+            }
+            if(numC == 'M'){
+                result += 1000;
+                if(index != 0 && s.charAt(index - 1) == 'C'){
+                    result -= 100;
+                    index --;
+                }
             }
         }
-
-        return -1;
+        return result;
     }
 
-    public boolean isBadVersion(int n) {
-        if (n == 3) return true;
-        return false;
-    }
     public static void main(String[] args) {
-
-        new Test().firstBadVersion(3);
+        new Solution().romanToInt("IV");
     }
 }
