@@ -13,7 +13,9 @@ package com.usc.leetcode;
  * CTRL ALT F6
  */
 public class AddSum {
-
+    static {
+        System.out.println("AddSum类被加载了");
+    }
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(7);
